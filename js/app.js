@@ -25,16 +25,16 @@ var myApp = angular.module('myApp', ['ui.router'])
 })
 
 // About page controller: define $scope.about as a string
-.controller('AboutController', function($scope, $http){
-  $http.get('/home/user/artist_names.json')
-         .then(function(result){
-            $scope.projInfo = result.data;                
-          });
+.controller('AboutController', function($scope){
   $scope.about = "Here's some information about this page."
 })
 
 // Content controller: define $scope.url as an image
-.controller('ContentController', function($scope){
+.controller('ContentController', function($scope, $http){
+  $http.get('data/projectInfo.json')
+         .then(function(result){
+            $scope.projInfo = result.data;                
+          });
   $scope.url = "http://conference.unavsa.org/wp-content/uploads/2015/06/SEA-pic.jpg"
 })
 
