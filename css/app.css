@@ -1,6 +1,6 @@
 .header {
-	border-bottom:1px solid #e3e3e3;
-	text-align: center
+	text-align: center;
+	color: white;
 }
 
 .footer {
@@ -11,4 +11,66 @@
 	left:0px;
 	text-align:center;
 	padding:10px;
+	background-color: white;
 }
+
+#topArea {
+	background-color: black;
+	width: 100%;
+	padding: 0;
+	padding-bottom: 0;
+}
+
+#headerArea {
+	padding-bottom: 15px;
+	margin-top: 100px;
+}
+
+#textArea {
+	margin-top: 50px;
+	margin-bottom: 150px;
+}
+
+@media screen and (min-width: 768px) {
+	#topArea {
+		background: url("../images/seattle-sm.jpg");
+		background-repeat: no-repeat;
+		height: 250px;
+		font-size: 50px;
+	}
+
+	#textArea {
+		margin-top: 25px;
+		margin-bottom: 85px;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	#topArea {
+		background: url("../images/seattle-md.jpg");
+		background-repeat: no-repeat;
+		height: 300px;
+	}
+
+	h1 {
+		font-size: 50px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	#topArea {
+		background: url("../images/seattle-lg.jpg");
+		background-repeat: no-repeat;
+		height: 325px;
+	}
+
+	h1 {
+		font-size: 75px;
+	}
+}
+
+
+
+
+
+
