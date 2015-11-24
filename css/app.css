@@ -5,13 +5,18 @@
 
 .footer {
 	position:fixed;
-	bottom:10px;
+	bottom:0px;
 	border-top:1px solid #e3e3e3;
 	width:100%;
 	left:0px;
 	text-align:center;
 	padding:10px;
-	background-color: white;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+	font-size: 15px;
+	color: white;
 }
 
 #topArea {
@@ -41,7 +46,11 @@
 
 	#textArea {
 		margin-top: 25px;
-		margin-bottom: 85px;
+		margin-bottom: 100px;
+	}
+
+	h2 {
+		font-size: 20px;
 	}
 }
 
@@ -69,6 +78,11 @@
 	}
 }
 
+@media screen and (min-width: 1200px) {
+	#topArea {
+		background-repeat: repeat;
+	}
+}
 
 
 

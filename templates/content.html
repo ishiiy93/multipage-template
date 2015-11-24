@@ -1,7 +1,9 @@
-<ul>
-	<li ng-repeat-start="data in projInfo">{{data.Title}}</li>
-	<li>{{data.Languages}}</li>
-	<li>{{data.Languages}}</li>
-	<li>{{data.GitHub}}</li>
-	<li ng-repeat-end>{{data.Web}}</li>
-</ul>
+<link href = "css/appProject.css" rel="stylesheet" type = "text/css"/>
+
+<div class="row">
+	<div id="projPic" ng-repeat="data in projInfo" class="col-md-6">
+		<a ng-href="{{data.Web}}" target="_blank"><img ng-src="{{data.Img}}"></a>
+		<p>{{data.Description}}</p>
+		<a ng-href="{{data.GitHub}}">Link to GitHub</a>
+	</div>
+</div>

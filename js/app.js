@@ -34,7 +34,7 @@ var myApp = angular.module('myApp', ['ui.router'])
 
 // Project page controller
 .controller('ContentController', function($scope, $http){
-  $http.get('data/projectInfo.json')
+  $http.get('data/projInfo.json')
          .then(function(result){
             $scope.projInfo = result.data;                
           });
