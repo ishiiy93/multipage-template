@@ -19,22 +19,24 @@ var myApp = angular.module('myApp', ['ui.router'])
   })
 })
 
-// Landing page controller: define $scope.number as a number
+// Home page controller
 .controller('HomeController', function($scope){
   $scope.number = 20
 })
 
-// About page controller: define $scope.about as a string
-.controller('AboutController', function($scope){
-  $scope.about = "Here's some information about this page."
+// About Me page controller
+.controller('AboutController', function($scope, $http){
+  $http.get('data/aboutMe.json')
+         .then(function(result){
+            $scope.aboutText = result.data;                
+          });
 })
 
-// Content controller: define $scope.url as an image
+// Project page controller
 .controller('ContentController', function($scope, $http){
   $http.get('data/projectInfo.json')
          .then(function(result){
             $scope.projInfo = result.data;                
           });
-  $scope.url = "http://conference.unavsa.org/wp-content/uploads/2015/06/SEA-pic.jpg"
 })
 
