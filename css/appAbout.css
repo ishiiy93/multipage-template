@@ -1,8 +1,10 @@
 img {
-	height: 30%;
-	width: 30%;
+	height: 25%;
+	width: 25%;
 	margin: auto;
 	display: block;
+	border-radius: 20px;
+	border: solid black 2px;
 }
 
 p{
